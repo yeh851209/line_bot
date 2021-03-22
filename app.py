@@ -40,7 +40,7 @@ def handle_message(event):
     msg = event.message.text
     s = '你說什麼？'
     if msg == '我愛老公':
-        s ='老公也愛你'
+        s = '老公也愛你'
         sticker_message = StickerSendMessage(
         package_id='11537',
         sticker_id='54002737'
@@ -48,7 +48,6 @@ def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=s)
-        sticker_message
         )
 
 
