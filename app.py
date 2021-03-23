@@ -39,10 +39,6 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     s = '你說什麼？'
-    sticker_message = StickerSendMessage(
-        package_id='11538',
-        sticker_id='51626506'
-        )
 
     if 'I love You' in msg:
          sticker_message = StickerSendMessage(
