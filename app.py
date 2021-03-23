@@ -47,15 +47,17 @@ def handle_message(event):
         line_bot_api.reply_message(
         event.reply_token,
         sticker_message)
+        continue
 
-
-    if msg == '我愛老公':
+    if '愛老公' in msg:
         s = '老公也愛你'
+    elif '愛愛' or '壞壞' in msg:
+        s = '來吧，十塊錢已經準備好了'
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=s)
         )
-
 
 if __name__ == "__main__":
     app.run()
