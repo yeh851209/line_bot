@@ -40,14 +40,6 @@ def handle_message(event):
     msg = event.message.text
     s = '你說什麼？'
 
-    if 'I love You' in msg:
-        sticker_message = StickerSendMessage(
-            package_id='2',
-            sticker_id='23')
-        line_bot_api.reply_message(
-            event.reply_token,
-            sticker_message)
-         return
 
     if msg == '我愛老公':
         s = '老公也愛你'
