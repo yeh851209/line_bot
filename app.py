@@ -43,11 +43,21 @@ def handle_message(event):
         package_id='11538',
         sticker_id='51626506'
         )
+    if msg == 'I love You':
+         sticker_message = StickerSendMessage(
+            package_id='11537',
+            sticker_id='54002737'
+        )
+          line_bot_api.reply_message(
+        event.reply_token,
+        sticker_message
+        )
+         return
     if msg == '我愛老公':
         s = '老公也愛你'
         sticker_message = StickerSendMessage(
-        package_id='11537',
-        sticker_id='54002737'
+            package_id='11537',
+            sticker_id='54002737'
         )
     line_bot_api.reply_message(
         event.reply_token,
