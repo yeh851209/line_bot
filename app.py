@@ -38,7 +38,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    s = '你說什麼？'
+    s = '不管如何老公都愛你喔<3？'
 
     if '我愛老公' in msg:
         sticker_message = StickerSendMessage(
