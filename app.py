@@ -49,8 +49,14 @@ def handle_message(event):
         sticker_message)
     elif '愛老公' in msg:
         s = '老公也愛你'
-    elif '愛愛' or '壞壞' in msg:
+    elif '愛愛' in msg:
         s = '來吧，十塊錢已經準備好了'
+    elif '壞壞' in msg:
+        s = '沒問題，隨時能提槍上馬'
+    elif '雞雞' in msg:
+        s = '我的一切都是給老婆的'
+    else :
+        s =' 不管如何老公都愛你喔<3？'
 
     line_bot_api.reply_message(
         event.reply_token,
